@@ -1,0 +1,19 @@
+{% extends 'default.html' %}
+
+{% block content %}
+{% if posts %}
+
+<div style="display: flex; flex-direction: column; margin-left: -420px;">
+
+{% for post in posts %}
+
+<div class="text-left" style="margin-bottom: 10px;">
+      <a class="btn btn-outline-dark mt-auto" href="{{ post.id }}" style="width: 450px; text-align: left;">{{ post.name }}</a>
+    </div>
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+{% endblock %}
